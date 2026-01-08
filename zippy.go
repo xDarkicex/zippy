@@ -125,6 +125,11 @@ var bufferPool = sync.Pool{
 func New() *Buffer {
 	buf := bufferPool.Get().(*Buffer)
 	buf.released = false
+	buf.maxSize = DefaultMaxBufferSize
+	buf.rIdx = 0
+	buf.rOff = 0
+	buf.length = 0
+	buf.buckets = buf.buckets[:0]
 	return buf
 }
 
