@@ -1,4 +1,3 @@
-````markdown
 # Zippy
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/xDarkicex/zippy.svg)](https://pkg.go.dev/github.com/xDarkicex/zippy)
@@ -377,5 +376,4 @@ MIT — see [LICENSE](LICENSE).
 If this saves you CPU cycles and syscalls,
 **star the repo ⭐**. It helps.
 
-```
-```
+
