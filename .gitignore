@@ -1,0 +1,33 @@
+# --- System & IDE Noise ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.vscode/
+*.code-workspace
+
+# --- General Build Artifacts ---
+*.o
+*.a
+*.so
+*.dylib
+*.out
+*.bin
+*.exe
+
+# --- Go Specific ---
+/vendor/
+/bin/
+go.sum
+# Note: Keep go.sum if you want reproducible builds, 
+# but many Go devs ignore it in specific library contexts.
+*.test
+*.prof
+mem.prof
+cpupane.out
+
+# --- Odin & Project Specific ---
+zippy.test
+# Add your specific Odin binary name here if it's not captured by *.bin
