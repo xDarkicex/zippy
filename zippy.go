@@ -185,6 +185,7 @@ func (b *Buffer) WriteString(s string) (int, error) {
 	if b == nil {
 		return 0, io.ErrUnexpectedEOF
 	}
+	b.checkReleased()
 	if len(s) == 0 {
 		return 0, nil
 	}
@@ -631,8 +632,6 @@ func (b *Buffer) consumeBytes(n int) {
 
 // useWritev determines if the writer supports writev() optimization.
 // Currently supports net.Conn and *os.File types.
-//
-//go:inline
 func useWritev(w io.Writer) bool {
 	switch w.(type) {
 	case net.Conn, *os.File:
